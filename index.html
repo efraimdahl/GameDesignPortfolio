@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Game Design Portfolio</title>
+    <meta name="description" content="A showcase of different explorations into games">
+    <meta name="author" content="Nick Briz adopted by Efraim Dahl">
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png"  href="https://raw.githubusercontent.com/nbriz/intro2netart/master/images/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Volkhov&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Molle:400i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+
+    <header>
+      <h1>Game Design Portfolio</h1>
+    </header>
+
+    <section class="info-table">
+      <div>
+        <div>An Exploration of Ideas:</div>
+        <div>Efraim Dahl's Gamestudio</div>
+      </div>
+      <div>
+        <div></div>
+        <div><a href="images/ED_Technical_Resume.pdf">Resume</a></div>
+      </div>
+      <div>
+        <div>email:</div>
+        <div>ef<i></i>raimdahl@uchi<i></i>cago.edu</div>
+      </div>
+    </section>
+
+    <article>
+      <h3>Web2Unity Controller</h3>
+      <article class="center">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Ixwj8Ci3CTQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </article>
+      <p>
+        I thought my phone would make a good controller for my unity game. Turned out that people don't do that too often, so I made it happen. I developed a web-server to handle touch events from the phone and host a controller website, then I set up a system (via websockets) that allowed the unity game to register commands of the server. 
+      </p>
+      <a href="https://github.com/efraimdahl/free-radish-client">Server Side Code</a>
+      <a href="https://github.com/efraimdahl/UnityNetworkGame" >Unity Client Code</a>
+    </article>
+    <br><br>
+    <br><br>
+
+    <article>
+      <h3>VR Musical Compass</h3>
+      <article class="center">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/caFFhdx77rk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </article>
+      <p>
+        I was developing a UI for a VR Diving Simulator in a team of four with Unity3D. To develop a real 'eyes-free' interface, (you might not want to block your vision with a clunky heads-up or arm-tracked user interface), we came up with a number of features to enable eyes free navigation. Audio warnings when oxygen and battery is low, or when the pressure is to high, or when calling. But by far my favorite part is the Musical Compass. It features:
+      </p>
+      <ul>
+        <li>
+          Dynamic change of music based on distance to target
+        </li>
+        <li>
+          Dampening of music depending on whether you are above or under water
+        </li>
+        <li>
+          Music gets distorted and distant when you turn away from the target, and clear when you turn towards it . 
+        </li>
+      </ul>
+      <p>
+        All coming together to navigate the Diver through this underwater adventure. 
+      </p>
+    </article>
+    <br><br>
+
+    <article>
+      <h3>Vocal Pong</h3>
+      <article class="center">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ryTtVmktSsc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>      </article>
+      <p>
+        I don't have to explain Pong, but this version lets you play blindly and eyes free. The game-state is completly sonified (you can hear the position of the ball and where it will land)
+        and you play by matching pitch. Additionally it features a fully vocalized menu that uses speech-recognition to access different functions such as reading out the score and instructions. Developed in Python. 
+      </p>
+    </article>
+    <br><br>
+
+    <article>
+      <h3>Clappy Bird</h3>
+      <article class="center">
+        <iframe width="500" height="400" src="images/ClappyBird.gif" frameborder="0" ></iframe>
+      </article>
+      <p>
+        Flappy Bird adjusted to accept microphone input. Makes for some fun interaction, try singing along to a song going through this! 
+        This game is web-based, written in HTML, CSS and JS and uses the web-audio-API
+      </p>
+      <a href="https://efraimdahl.github.io/floppybird/">Play the game (Firefox Only)</a>
+    </article>
+    <br><br>
+
+    <article>
+      <h3>AudioMaze</h3>
+      <p>
+        [in development] Labyrinth game with completely sonified game state that guides the player through a labyrinth. Aim of the game is for the player, to solve a puzzle by moving objects. But there is a trick to this, the player will never see where the objects belong. Instead the object is a musical section, and moving it to the right place will make the section 'lock in to place'. Together with other objects the player can build up an entire musical piece, by putting them in the right places.
+      </p>
+      <a href="https://github.com/Paulpanther/AudioMaze/">Check out the current State</a>
+    </article>
+    <br><br>
+
+    <article>
+      <h3>Video Graph</h3>
+      <article class="center">
+        <iframe width="560" height="315" src="images/unityImage.png" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </article>
+      <p>
+        An interactive Video player developed in Unity3D. I developed this for the Uchicago Human-Robot-Interaction-Lab with Sarah Sebo, to help conduct user-studies. It allows you to set up several different 'choose your own adventure' video sequences, where you can chose which video is played next while another video is playing. The goal is to minimize the delay between videos by loading the different possible next videos concurrently, it also allows for filler videos that wait for user input all without creating noticable breaks. It uses a graph structure to organize which videos can follow on which videos, hence the name.
+      </p>
+      <a href="https://github.com/SeboLab/InteractiveVideoPlayer">Check out the Repository</a>
+    </article>
+    <br><br>
+
+
+    <article>
+      <h3>Audio Visual Projects</h3>
+      <p>A selection of small artisticly inspired coding experiments around sound and visuals</p>
+      <h4>Atten Java Plugin</h4>
+      <article class="center">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/3AMOHFRRVAQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </article>
+      <p>
+        A VST-Effect plugin to be loaded into a Digital Audio Workstation (DAW). The Programm distorts the sound (crunchy rock guitar sound) and adds a delay (echo effect). Beyond that it also features a bunch of other parameters that the user can tweak to customize their sound. The plugin is programmed in Java. The translation from Java to the VST-format is done using the <a href= "http://jvstwrapper.sourceforge.net/">JVSTWrapper library.</a> 
+      </p>
+      
+    </article>
+    <br><br>
+
+    <article>
+      <h4>Glass</h4>
+      <article class="center">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/LcI3yCAKZe0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </article>
+      <p>
+       [Class project] A website that lets you play glass-organ with your computer keyboard. The sound is produced using the Web-Audio API.  
+      </p>
+      <a href="https://efraimdahl.github.io/algo-muzak/">Play it here</a>
+    </article>
+    
+    <article>
+      <h4>Form Code (P5 Web Animation)</h4>
+      <article class="center">
+        <iframe width="500" height="400" src="images/FormCode.gif" frameborder="0" ></iframe>
+      </article>
+      <a href="https://efraimdahl.github.io/form-code/">Play it here</a>
+    </article>
+
+    <article>
+      <h4>Find the Red Cube</h4>
+      <article class="center">
+        <iframe width="500" height="400" src="images/FindTheRedCube.gif" frameborder="0" ></iframe>
+      </article>
+      <p>
+        [Class project] A mini mini web-game made with <a href="https://threejs.org/">Three.js.</a> Minimize the time to select all the cubes.
+       </p>
+      <a href="https://efraimdahl.github.io/Threejs-Basic-Animation/assignment/game.html">How fast are you?</a>
+    </article>
+
+    <br><br>
+    
+    <article>
+      <h3>MUSIC</h3>
+      <p>Finally, I produce music, some of which you have already heard as part of the projects above, for a more complete list check out:</p>
+      <a href="https://soundcloud.com/efti_tayde">Soundcloud </a><a href="https://open.spotify.com/artist/4FjmsXnDVNWLT1pkfurKVl"> Spotify</a>
+    </article>
+    <br><br>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+  </body>
+</html>
